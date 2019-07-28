@@ -6,4 +6,4 @@ before_install:
   - docker build -t srosti/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run srosti/docker-react npm run test -- --coverage
+  - docker run -e CI=true srosti/docker-react npm run test -- --coverage
